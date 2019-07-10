@@ -78,6 +78,7 @@
 .menu--open {
   display: block;
   height: 0;
+  animation: leftToRight 0.5s;
 }
 .articles {
   margin-top: 95px;
@@ -147,6 +148,14 @@
 }
 .highlight {
   background-color: #21364a;
+}
+@keyframes leftToRight {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 html,
 body {
