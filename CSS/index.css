@@ -80,12 +80,9 @@
 .article {
   margin: 20px 10%;
   padding: 0 20px 25px;
-  border: 1px solid lightgrey;
+  border: 2px solid lightgrey;
   border-radius: 10px;
   background-color: #001F3F;
-  position: relative;
-  height: 50px;
-  overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
 }
 .article .articleContent {
