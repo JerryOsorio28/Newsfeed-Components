@@ -53,7 +53,7 @@
   border-bottom: none;
   z-index: 2;
   /* This set the layer level of the element, it has precendence over initial level of 1*/
-  transition: width 2s;
+  transition: width 0.5s;
 }
 .menu:hover {
   width: 300px;
@@ -65,14 +65,19 @@
 }
 .menu ul li {
   list-style-type: none;
-  font-size: 32px;
+  font-size: 20px;
   padding: 30px 0 30px 0;
   text-align: center;
   border-bottom: 1px solid black;
   color: white;
+  font-family: 'Roboto';
+}
+.menu ul li:hover {
+  background-color: #21364a;
 }
 .menu--open {
   display: block;
+  height: 0;
 }
 .articles {
   margin-top: 95px;
@@ -114,6 +119,9 @@
   border: 1px solid black;
   cursor: pointer;
 }
+.article .articleBar .articleButtons .buttonOpen:hover {
+  background-color: lightgray;
+}
 .article .articleBar .articleButtons .buttonClose {
   border-radius: 0.5rem;
   width: 5rem;
@@ -121,8 +129,11 @@
   border: 1px solid black;
   cursor: pointer;
 }
+.article .articleBar .articleButtons .buttonClose:hover {
+  background-color: lightgray;
+}
 .menuTransition {
-  transition: width 2s;
+  transition: width 0.5s;
 }
 .menuTransition:hover {
   width: 300px;
@@ -133,6 +144,9 @@
   background-color: white;
   border: 1px solid black;
   cursor: pointer;
+}
+.highlight {
+  background-color: #21364a;
 }
 html,
 body {
