@@ -3,37 +3,159 @@
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 400;
-  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzc.ttf) format('truetype');
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v19/KFOkCnqEu92Fr1Mu51xIIzc.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
 }
 /* Below this line is where you will start your work */
 /* It is important to note, you will not be writing any CSS in this file*/
 .header {
   width: 100%;
   height: 75px;
-  background-color: #388E3C;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
   z-index: 2;
+  background-color: #001F3F;
+  color: white;
 }
 .header h1 {
   margin: 0;
   font-size: 48px;
+}
+.menu-button {
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+}
+.menu {
+  display: none;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  /* This give the height 100% of the screen or, '100% of View Height' */
+  border: 1px solid #004D40;
+  border-left: none;
+  border-bottom: none;
+  z-index: 2;
+  /* This set the layer level of the element, it has precendence over initial level of 1*/
+  transition: width 0.5s;
+}
+.menu:hover {
+  width: 300px;
+}
+.menu ul {
+  padding: 0;
+  margin: 0;
+  background-color: #001F3F;
+}
+.menu ul li {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 30px 0 30px 0;
+  text-align: center;
+  border-bottom: 1px solid black;
+  color: white;
+  font-family: 'Roboto';
+}
+.menu ul li:hover {
+  background-color: #21364a;
+}
+.menu--open {
+  display: block;
+  height: 0;
+  animation: leftToRight 0.5s;
+}
+.articles {
+  margin-top: 95px;
+}
+.article {
+  margin: 20px 10%;
+  padding: 0 20px 25px;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  background-color: #001F3F;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+.article .articleContent {
+  display: none;
+  margin-top: 15px;
+  color: white;
+}
+.article .toggleOn {
+  display: block;
+}
+.article .articleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.article .articleBar h2 {
+  font-size: 22px;
+  padding: 0;
+  margin: 15px 0 0;
+  color: white;
+}
+.article .articleBar .articleButtons .hideButton {
+  display: none;
+}
+.article .articleBar .articleButtons .buttonOpen {
+  border-radius: 0.5rem;
+  width: 5rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.article .articleBar .articleButtons .buttonOpen:hover {
+  background-color: lightgray;
+}
+.article .articleBar .articleButtons .buttonClose {
+  border-radius: 0.5rem;
+  width: 5rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.article .articleBar .articleButtons .buttonClose:hover {
+  background-color: lightgray;
+}
+.menuTransition {
+  transition: width 0.5s;
+}
+.menuTransition:hover {
+  width: 300px;
+}
+.buttonsDefault {
+  border-radius: 0.5rem;
+  width: 5rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.highlight {
+  background-color: #21364a;
+}
+@keyframes leftToRight {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 html,
 body {

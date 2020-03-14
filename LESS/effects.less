@@ -1,0 +1,44 @@
+//========== Created effects.less file ============
+// .fx  {
+//     animation: pulse 5s infinite;
+//     @keyframes pulse {
+//     0% {
+//       background-color: #FFFEF7;
+//     }
+//     100% {
+//       background-color: #001F3F;
+//     }
+//   }
+// }
+
+.menuTransition {
+
+    transition: width .5s;
+    &:hover {
+      width: 300px;
+    }
+
+}
+
+.buttonsDefault {
+  border-radius: .5rem;
+  width: 5rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: rgb(33, 54, 74);
+}
+
+@keyframes leftToRight {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+  
